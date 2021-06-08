@@ -10,20 +10,20 @@ Amplify.configure(awsconfig);
 function App() {
   const [songs, setSongs] = useState([]);
   
-  const fetchSongs = async () => {
-      try {
-          const songData = await API.graphql(graphqlOperation(listSongs));
-          const songList = songData.data.listSongs.items;
-          console.log('song list', songList);
-          setSongs(songList);
-      } catch (error) {
-          console.log('error on fetching songs', error);
-      }
-  };
-  
   useEffect(() => {
     fetchSongs();
   }, []);
+
+  const fetchSongs = async () => {
+    try {
+      const songData = await API.graphql(graphqlOperation(listSongs));
+      const songList = songData.data.listSongs.items;
+      console.log('song list', songList);
+      setSongs(songList);
+    } catch (error) {
+      console.log('error on fetching songs', error);
+    }
+  };
   
   return (
     <div className='App'>
