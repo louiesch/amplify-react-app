@@ -5,7 +5,7 @@ export const onCreateSong = /* GraphQL */ `
   subscription OnCreateSong {
     onCreateSong {
       id
-      name
+      title
       description
       filePath
       likes
@@ -19,7 +19,7 @@ export const onUpdateSong = /* GraphQL */ `
   subscription OnUpdateSong {
     onUpdateSong {
       id
-      name
+      title
       description
       filePath
       likes
@@ -33,7 +33,7 @@ export const onDeleteSong = /* GraphQL */ `
   subscription OnDeleteSong {
     onDeleteSong {
       id
-      name
+      title
       description
       filePath
       likes

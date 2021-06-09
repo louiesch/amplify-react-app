@@ -8,7 +8,7 @@ export const createSong = /* GraphQL */ `
   ) {
     createSong(input: $input, condition: $condition) {
       id
-      name
+      title
       description
       filePath
       likes
@@ -25,7 +25,7 @@ export const updateSong = /* GraphQL */ `
   ) {
     updateSong(input: $input, condition: $condition) {
       id
-      name
+      title
       description
       filePath
       likes
@@ -42,7 +42,7 @@ export const deleteSong = /* GraphQL */ `
   ) {
     deleteSong(input: $input, condition: $condition) {
       id
-      name
+      title
       description
       filePath
       likes

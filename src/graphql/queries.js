@@ -5,7 +5,7 @@ export const getSong = /* GraphQL */ `
   query GetSong($id: ID!) {
     getSong(id: $id) {
       id
-      name
+      title
       description
       filePath
       likes
@@ -24,7 +24,7 @@ export const listSongs = /* GraphQL */ `
     listSongs(filter: $filter, limit: $limit, nextToken: $nextToken) {
       items {
         id
-        name
+        title
         description
         filePath
         likes
