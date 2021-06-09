@@ -32,7 +32,7 @@ function App() {
 
   const addLike = async idx => {
     try {
-      const song = songs(idx);
+      const song = songs[idx];
       song.likes = song.likes + 1;
       delete song.createdAt;
       delete song.updatedAt;
